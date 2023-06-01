@@ -1,10 +1,17 @@
 import NameInput from "../Components/NameInput/NameInput";
 import WelcomeDisplay from "../Components/WelcomeDisplay/WelcomeDisplay";
-export default function Homepage() {
-  return (
+import { useState } from "react";
+
+function Homepage() {
+
+  const [name, setName] = useState("");
+  const [visibility, setVisibility] = useState(false);
+  
+  return visibility ?(
     <div>
-      <NameInput />
-      <WelcomeDisplay name="Ada" />
+      <WelcomeDisplay name={name} />
     </div>
-  );
+  ) : (<NameInput setName = {setName} setVisibility = {setVisibility}/>)
 }
+
+export default Homepage;
