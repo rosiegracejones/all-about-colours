@@ -12,13 +12,14 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
+        <div className="circle-div">
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/learn" element={<LearnPage />} />
           <Route path="/quiz" element={<QuizPage />} />
         </Routes>
-      </div>
+      </div></div>
     </BrowserRouter>
   );
 }

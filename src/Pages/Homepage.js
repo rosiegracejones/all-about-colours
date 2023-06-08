@@ -1,6 +1,7 @@
 import NameInput from "../Components/NameInput/NameInput";
 import WelcomeDisplay from "../Components/WelcomeDisplay/WelcomeDisplay";
 import { useState } from "react";
+import "./Homepage.css";
 
 function Homepage() {
 
