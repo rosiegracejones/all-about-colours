@@ -1,0 +1,4 @@
+make 2 Colour components (PrimaryColour and SecondaryColour)
+ - create route paths for colours on Learn page
+ - create Learn function 
+ 
