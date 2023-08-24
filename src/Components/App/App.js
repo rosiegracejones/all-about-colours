@@ -4,6 +4,7 @@ import Homepage from "../../Pages/Homepage";
 import AboutPage from "../../Pages/AboutPage";
 import QuizPage from "../../Pages/QuizPage";
 import LearnPage from "../../Pages/LearnPage";
+import PrimaryColour from "../Colours/PrimaryColour";
 import BackgroundColour from "../BackgroundColour/BackgroundColour";
 
 import "./App.css";
@@ -19,6 +20,9 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/learn" element={<LearnPage />} />
           <Route path="/quiz" element={<QuizPage />} />
+          <Route path="/learn/red" element={<PrimaryColour colour="red" />} />
+          <Route path="/learn/yellow" element={<PrimaryColour colour="yellow" />} />
+
         </Routes>
       </div>
     </BrowserRouter>
