@@ -1,10 +1,10 @@
 import BackgroundColour from "../BackgroundColour/BackgroundColour";
 
-function PrimaryColour({ colour }) {
+function PrimaryColour({ colourHex, colour }) {
 	return (
 		<>
 			<div>
-				<BackgroundColour backgroundColour={colour}>
+				<BackgroundColour backgroundColour={colourHex}>
 					<div className="circle-div">
 						<p>{colour}</p>
 					</div>
