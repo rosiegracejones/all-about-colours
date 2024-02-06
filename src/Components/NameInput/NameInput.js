@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import "./NameInput.css";
 
 
-function NameInput ( {setName, setVisibility } ) {
+function NameInput ( {setName } ) {
 
 	const [nameInput, setNameInput] = useState("");
 
@@ -15,8 +15,6 @@ function NameInput ( {setName, setVisibility } ) {
     event.preventDefault();
     console.log(nameInput);
     setName(nameInput);
-		setVisibility(true);
-		setNameInput("");
   }
 
   return (

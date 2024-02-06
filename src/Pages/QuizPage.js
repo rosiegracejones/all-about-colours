@@ -1,6 +1,6 @@
 import QuestionTypeOne from "../Components/QuestionTypeOne/QuestionTypeOne";
 
-export default function QuizPage() {
+export default function QuizPage({ name }) {
 	const quizData = [
 		{
 			questionType: 1,
@@ -15,6 +15,11 @@ export default function QuizPage() {
 		// Add more questions as needed
 	];
 
-	return <>{console.log(quizData[1])}
-  <QuestionTypeOne/></>;
+	return (
+		<>
+			{console.log(quizData[1])}
+			<QuestionTypeOne />
+			<h1>well done {name}</h1>
+		</>
+	);
 }
