@@ -2,3 +2,32 @@ make 2 Colour components (PrimaryColour and SecondaryColour)
  - create route paths for colours on Learn page
  - create Learn function 
  
+
+Quiz Data
+ Each data object in the array will have:
+ - questionType (1, 2, or 3)
+ - Question colours (two primary colours or the colour you're trying to make)
+ - Answer colour/s
+
+ Functionality will have to look at the answer colours and compare with user selection to determine correct or incorrect
+
+
+Question Type One 
+The user is given two colours and asked to select the colour that those colours make when mixed together
+There are three possible question/answer combinations:
+- yellow & blue = green
+- blue & red = purple
+- red & yellow = orange
+
+Question Type Two
+The user is given one colour and asked to select the two colours that make that colour when mixed together
+There are three possible question/answer combinations:
+- orange = red & yellow
+- purple = blue & red
+- green = blue & yellow
+
+Question Type Three
+The user is presented with a colour and asked to select from a number of images which images are the same colour
+
+
+Make name a usesState variable
