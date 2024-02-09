@@ -18,7 +18,7 @@ export default function QuizPage({ name }) {
 	return (
 		<>
 			{console.log(quizData[1])}
-			<QuestionTypeOne />
+			<QuestionTypeOne name = {name}/>
 			<h1>well done {name}</h1>
 		</>
 	);

@@ -1,3 +1,14 @@
+Notes from last session/plan:
+- last time we: 
+    - added page values based on data (question and answered displayed on the page including answer buttons) 
+    - completed a basic function in QuestionTypeOne that determined whether the selected button matched the correct answer and console logged correct or incorrect and displayed the child's inputted name
+- next time: 
+    - create current question index number as a state variable
+    - create a function that creates a random number between 0 and 2 and sets the index variable to that number (attach the function to a 'next question' button)
+    - change the 'hard coded' index numbers in the return of QuestionTypeOne to be the index variable
+    - some basic styling
+
+
 make 2 Colour components (PrimaryColour and SecondaryColour)
  - create route paths for colours on Learn page
  - create Learn function 
