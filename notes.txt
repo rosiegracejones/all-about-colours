@@ -15,16 +15,18 @@ Quiz Data
 Question Type One 
 The user is given two colours and asked to select the colour that those colours make when mixed together
 There are three possible question/answer combinations:
-- yellow & blue = green
-- blue & red = purple
-- red & yellow = orange
+- yellow & blue = green (purple, orange)
+- blue & red = purple (green, orange)
+- red & yellow = orange (purple, green)
 
 Question Type Two
 The user is given one colour and asked to select the two colours that make that colour when mixed together
 There are three possible question/answer combinations:
-- orange = red & yellow
-- purple = blue & red
-- green = blue & yellow
+- orange = red & yellow (blue)
+- purple = blue & red (yellow)
+- green = blue & yellow (red)
+MVP: correct and incorrect message
+(ideas: different messages for when incorrect combo selected)
 
 Question Type Three
 The user is presented with a colour and asked to select from a number of images which images are the same colour

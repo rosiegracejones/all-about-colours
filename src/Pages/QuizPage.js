@@ -4,12 +4,12 @@ export default function QuizPage({ name }) {
 	const quizData = [
 		{
 			questionType: 1,
-			questionColors: ["yellow", "blue"],
+			questionColours: ["yellow", "blue"],
 			answerColor: "green",
 		},
 		{
 			questionType: 2,
-			questionColors: ["orange"],
+			questionColours: ["orange"],
 			answerColors: ["red", "yellow"],
 		},
 		// Add more questions as needed
