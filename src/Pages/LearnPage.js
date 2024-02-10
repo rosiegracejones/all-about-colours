@@ -1,6 +1,6 @@
 import BackgroundColour from "../Components/BackgroundColour/BackgroundColour";
 import PrimaryColour from "../Components/Colours/PrimaryColour";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function LearnPage() {
 

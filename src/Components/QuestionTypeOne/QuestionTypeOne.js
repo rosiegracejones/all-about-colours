@@ -1,22 +1,22 @@
-function QuestionTypeOne( { name }) {
+function QuestionTypeOne({ name }) {
 	const quizData = [
 		{
 			questionType: 1,
-			questionColours: ["yellow and blue"],
+			questionColours: ["Yellow and Blue"],
 			correctColour: "Green",
-			incorrectColours: ["purple", "orange"],
+			incorrectColours: ["Purple", "Orange"],
 		},
 		{
 			questionType: 1,
-			questionColours: ["red and yellow"],
+			questionColours: ["Red and Yellow"],
 			correctColour: ["Orange"],
-			incorrectColours: ["green", "purple"],
+			incorrectColours: ["Green", "Purple"],
 		},
 		{
 			questionType: 1,
-			questionColours: ["blue and red"],
+			questionColours: ["Blue and Red"],
 			correctColour: ["Purple"],
-			incorrectColours: ["green", "purple"],
+			incorrectColours: ["Green", "Purple"],
 		},
 		// Add more questions as needed
 	];
@@ -31,7 +31,7 @@ function QuestionTypeOne( { name }) {
 		if (clickedColour === correctColour) {
 			console.log("Correct, well done " + name + "!");
 		} else {
-			console.log("Incorrect " + name + ", try again");
+			console.log("Not quite " + name + ", try again");
 		}
 	}
 

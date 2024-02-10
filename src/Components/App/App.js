@@ -23,12 +23,12 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/learn" element={<LearnPage />} />
           <Route path="/quiz" element={<QuizPage name={name} />} />
-          <Route path="/learn/red" element={<PrimaryColour colourHex="#E7242D" colour="red"/>} />
-          <Route path="/learn/yellow" element={<PrimaryColour colourHex="#F8C039"colour="yellow" />} />
-          <Route path="/learn/blue" element={<PrimaryColour colourHex="#0000F8" colour="blue"/>} />
-          <Route path="/learn/green" element={<SecondaryColour colourHex="#287A19" colour="green"/>} />
-          <Route path="/learn/purple" element={<SecondaryColour colourHex="#633295" colour="purple"/>} />
-          <Route path="/learn/orange" element={<SecondaryColour colourHex="#F66F00" colour="orange"/>} />
+          <Route path="/learn/red" element={<PrimaryColour colourHex="#ed1c24" colour="red"/>} />
+          <Route path="/learn/yellow" element={<PrimaryColour colourHex="#eecc0e"colour="yellow" />} />
+          <Route path="/learn/blue" element={<PrimaryColour colourHex="#3479f8" colour="blue"/>} />
+          <Route path="/learn/green" element={<SecondaryColour colourHex="#00a61b" colour="green"/>} />
+          <Route path="/learn/purple" element={<SecondaryColour colourHex="#ac34f8" colour="purple"/>} />
+          <Route path="/learn/orange" element={<SecondaryColour colourHex="#e87a22" colour="orange"/>} />
 
         </Routes>
       </div>
