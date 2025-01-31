@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function QuestionTypeOne({ name }) {
 	const quizData = [
 		{
@@ -21,6 +23,8 @@ function QuestionTypeOne({ name }) {
 		// Add more questions as needed
 	];
 
+	const [message, setMessage] = useState("");
+
 	// create a function that will use the colour selected to display correct or incorrect based on the colour selected
 	// compare the answer clicked to the correct answer in the question
 	// if correct, console log correct
@@ -29,9 +33,11 @@ function QuestionTypeOne({ name }) {
 	function checkAnswer(clickedColour) {
 		const correctColour = quizData[0].correctColour;
 		if (clickedColour === correctColour) {
-			console.log("Correct, well done " + name + "!");
+			setMessage(`Correct, well done ${name}!`);
+			// console.log("Correct, well done " + name + "!");
 		} else {
-			console.log("Not quite " + name + ", try again");
+			setMessage(`Not quite ${name}, try again`);
+			// console.log("Not quite " + name + ", try again");
 		}
 	}
 
@@ -48,6 +54,7 @@ function QuestionTypeOne({ name }) {
 			<button onClick={() => checkAnswer(quizData[0].incorrectColours[1])}>
 				{quizData[0].incorrectColours[1]}
 			</button>
+			<p>{message}</p>
 		</div>
 	);
 }
