@@ -1,3 +1,16 @@
+/* 
+
+Previously, LearnPage rendered either PrimaryColour and SecondaryColour component when a colour link was clicked. These components received the colour name and hex value as props from child routes in App.js, e.g.:
+	<Route path="red" element={<PrimaryColour colourHex="#ed1c24" colour="red" />} />
+
+Now, colour data (hex and type: primary/secondary) is stored in an object called colourData inside LearnPage. useParams() extracts the colour from the URL, finds its corresponding data in colourData, and passes it as a prop to BackgroundColour.  
+
+When no colour has been selected (/learn), BackgroundColour defaults to #c4d as before. When a colour is clicked, LearnPage remains displayed but BackgroundColour updates dynamically based on the hex value from colourData, instead of rendering a new component. Basically, everything that will be displayed on this page can now be dynamically updated based on the selected colour.
+
+In App.js /learn is now set as a parent route, and Outlet is used in LearnPage to handle bested child routes like /learn/red 
+
+*/
+
 import BackgroundColour from "../Components/BackgroundColour/BackgroundColour";
 import { Link, Outlet, useParams } from "react-router-dom";
 
@@ -32,6 +45,7 @@ function LearnPage() {
 							<Link to="green">Green</Link>
 							<Link to="purple">Purple</Link>
 							<Link to="orange">Orange</Link>
+							<p>{colour}</p>
 						</div>
 					)}
 					<Outlet />
