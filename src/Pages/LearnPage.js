@@ -19,9 +19,9 @@ const colourData = {
 	red: { hex: "#ed1c24", type: "primary" },
 	yellow: { hex: "#eecc0e", type: "primary" },
 	blue: { hex: "#3479f8", type: "primary" },
-	green: { hex: "#00a61b", type: "secondary" },
-	purple: { hex: "#ac34f8", type: "secondary" },
-	orange: { hex: "#e87a22", type: "secondary" },
+	green: { hex: "#00a61b", type: "secondary", mix: ["blue", "yellow"] },
+	purple: { hex: "#ac34f8", type: "secondary", mix: ["red", "blue"] },
+	orange: { hex: "#e87a22", type: "secondary", mix: ["red", "yellow"] },
 };
 
 function LearnPage() {
@@ -37,17 +37,46 @@ function LearnPage() {
 		<>
 			<div className="LearnPage">
 				<BackgroundColour backgroundColour={backgroundColour}>
-					{colourInfo && (
-						<div className="circle-div">
-							<Link to="red">Red</Link>
-							<Link to="yellow">Yellow</Link>
-							<Link to="blue">Blue</Link>
-							<Link to="green">Green</Link>
-							<Link to="purple">Purple</Link>
-							<Link to="orange">Orange</Link>
-							<p>{colour}</p>
-						</div>
-					)}
+					<div className="circle-div">
+						{/* If colourInfo...*/}
+						{colourInfo ? (
+							<>
+								<h1>{colour.charAt(0).toUpperCase() + colour.slice(1)}</h1>
+
+								{/* ..has primary type, display:*/}
+								{colourInfo.type === "primary" ? (
+									<p>
+										{/* ensures first letter is capitalised*/}
+										{colour.charAt(0).toUpperCase() + colour.slice(1)} is a
+										primary colour. This means it can't be made by mixing other
+										colours together. <Link to="">Choose another colour</Link>
+									</p>
+								) : (
+									<p>
+										{/* ..else display:*/}
+										{colour.charAt(0).toUpperCase() + colour.slice(1)} is a
+										secondary colour. It's made by mixing together{" "}
+										{colourInfo.mix[0]} & {colourInfo.mix[1]}.{" "}
+										<Link to="">Choose another colour</Link>
+									</p>
+								)}
+							</>
+						) : (
+							// If no colourInfo null, display:
+							<>
+								<p>Select a colour to learn more!</p>
+								<>
+									<Link to="red">Red</Link>
+									<Link to="yellow">Yellow</Link>
+									<Link to="blue">Blue</Link>
+									<Link to="green">Green</Link>
+									<Link to="purple">Purple</Link>
+									<Link to="orange">Orange</Link>
+								</>
+							</>
+						)}
+					</div>
+
 					<Outlet />
 				</BackgroundColour>
 			</div>
