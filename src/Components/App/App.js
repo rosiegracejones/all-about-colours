@@ -1,7 +1,7 @@
 import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import HomePage from "../../Pages/HomePage";
+import Homepage from "../../Pages/Homepage";
 import AboutPage from "../../Pages/AboutPage";
 import QuizPage from "../../Pages/QuizPage";
 import LearnPage from "../../Pages/LearnPage";
@@ -20,7 +20,7 @@ function App() {
 						<Route
 							exact
 							path="/"
-							element={<HomePage name={name} setName={setName} />}
+							element={<Homepage name={name} setName={setName} />}
 						/>
 						<Route path="/about" element={<AboutPage />} />
 						<Route path="/learn" element={<LearnPage />}>
