@@ -9,10 +9,13 @@ When no colour has been selected (/learn), BackgroundColour defaults to #c4d as 
 
 In App.js /learn is now set as a parent route, and Outlet is used in LearnPage to handle bested child routes like /learn/red 
 
+Have also now added ColourText component which displays information about the selected colour, based on colour's type value (primary/secondary) and mix value (if secondary).
+
 */
 
 import BackgroundColour from "../Components/BackgroundColour/BackgroundColour";
 import { Link, Outlet, useParams } from "react-router-dom";
+import ColourText from "../Components/ColourText/ColourText";
 
 // colour name keys mapped to colour info objects
 const colourData = {
@@ -38,45 +41,24 @@ function LearnPage() {
 			<div className="LearnPage">
 				<BackgroundColour backgroundColour={backgroundColour}>
 					<div className="circle-div">
-						{/* If colourInfo...*/}
 						{colourInfo ? (
-							<>
-								<h1>{colour.charAt(0).toUpperCase() + colour.slice(1)}</h1>
-
-								{/* ..has primary type, display:*/}
-								{colourInfo.type === "primary" ? (
-									<p>
-										{/* ensures first letter is capitalised*/}
-										{colour.charAt(0).toUpperCase() + colour.slice(1)} is a
-										primary colour. This means it can't be made by mixing other
-										colours together. <Link to="">Choose another colour</Link>
-									</p>
-								) : (
-									<p>
-										{/* ..else display:*/}
-										{colour.charAt(0).toUpperCase() + colour.slice(1)} is a
-										secondary colour. It's made by mixing together{" "}
-										{colourInfo.mix[0]} & {colourInfo.mix[1]}.{" "}
-										<Link to="">Choose another colour</Link>
-									</p>
-								)}
-							</>
+							// If colourInfo exists, render ColourText component
+							<ColourText colour={colour} colourInfo={colourInfo} />
 						) : (
-							// If no colourInfo null, display:
+							// If colourInfo is empty, show default view:
 							<>
 								<p>Select a colour to learn more!</p>
-								<>
+								<div>
 									<Link to="red">Red</Link>
 									<Link to="yellow">Yellow</Link>
 									<Link to="blue">Blue</Link>
 									<Link to="green">Green</Link>
 									<Link to="purple">Purple</Link>
 									<Link to="orange">Orange</Link>
-								</>
+								</div>
 							</>
 						)}
 					</div>
-
 					<Outlet />
 				</BackgroundColour>
 			</div>

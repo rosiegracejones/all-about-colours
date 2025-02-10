@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
-import "./NameInput.css";
 
 
 function NameInput ( {setName } ) {
@@ -29,7 +28,7 @@ function NameInput ( {setName } ) {
             placeholder="What is your name?"
           />
         </label>
-        <Button />
+        <Button buttonText="Click me"/>
       </form>
     </div>
   );
