@@ -1,3 +1,11 @@
+28th Feb 2025
+- Quiz page
+- look at randomising which question loads (removing questions that have already been asked)
+- button for next question to show if correct
+- look at data format for quiz page and where it sits (send data prop to QuestionType component)
+
+
+
 Notes from last session/plan:
 - last time we: 
     - added page values based on data (question and answered displayed on the page including answer buttons) 
