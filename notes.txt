@@ -1,3 +1,9 @@
+14 March 2025
+- Look at code in notes at bottom of QuizPage (from ChatGPT) and understand how it's working, including rendering a question on loads
+- Add logic to prevent user from being able to continue to next question unless they have got the question correct
+- look at adding question type two component to logic
+
+
 28th Feb 2025
 - Quiz page
 - look at randomising which question loads (removing questions that have already been asked)
