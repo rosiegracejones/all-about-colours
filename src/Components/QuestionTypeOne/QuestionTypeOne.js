@@ -5,6 +5,7 @@ function QuestionTypeOne({
   questionColours,
   correctColour,
   incorrectColours,
+  setCorrectAnswer
 }) {
   const [message, setMessage] = useState("");
 
@@ -16,6 +17,7 @@ function QuestionTypeOne({
   function checkAnswer(clickedColour) {
     if (clickedColour === correctColour) {
       setMessage(`Correct, well done ${name}!`);
+      setCorrectAnswer(true);
       // console.log("Correct, well done " + name + "!");
     } else {
       setMessage(`Not quite ${name}, try again`);
@@ -40,5 +42,9 @@ function QuestionTypeOne({
     </div>
   );
 }
+
+// create state variable true/false in quiz page
+// send it down to question type 1 as this.prop
+// add functionality to the buttons function (checkAnswer) that sets the state to true or false
 
 export default QuestionTypeOne;
