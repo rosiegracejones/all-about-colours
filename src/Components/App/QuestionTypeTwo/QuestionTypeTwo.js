@@ -1,4 +1,4 @@
-function QuestionTypeOne({
+function QuestionTypeTwo({
   name,
   questionColours,
   correctColour,
