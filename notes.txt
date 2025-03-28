@@ -1,3 +1,8 @@
+10 April 2025
+- Edit logic in QuestionTypeTwo component so that it works with type 2 questions in data (do we want button to submit after two colours are selected?)
+- Try and add logic into QuizPage to know when to call QuestionTypeTwo
+
+
 28 March 2025
 - look at removing 'next question' button on new question load (currently not showing on render, but showing after despite answer true/false)
 - look at adding question type two component to logic
